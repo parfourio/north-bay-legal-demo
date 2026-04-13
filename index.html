@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Bay Legal | Personal Injury Attorney | Santa Rosa, CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2c4e;
+      --navy-dark: #0f1c33;
+      --navy-mid: #243659;
+      --gold: #c9943a;
+      --gold-light: #e0ad59;
+      --gold-pale: #f5e9d6;
+      --white: #ffffff;
+      --off-white: #f8f6f2;
+      --text: #2b2b2b;
+      --text-light: #5a5a5a;
+      --border: #ddd4c5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--navy-dark);
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .nav-logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .nav-logo-sub {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 22px !important;
+      border-radius: 3px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy-dark) !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: var(--navy-dark);
+      padding: 24px 32px 32px;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu ul li a {
+      display: block;
+      padding: 14px 0;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu ul li:last-child a { border-bottom: none; }
+    .mobile-menu ul li a:hover { color: var(--gold-light); }
+
+    .mobile-menu .mobile-cta {
+      margin-top: 20px;
+      display: block;
+      background: var(--gold);
+      color: var(--white);
+      text-align: center;
+      padding: 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #2a4a7a 100%);
+      display: flex;
+      align-items: center;
+      padding: 72px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 42%;
+      background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&q=80') center/cover no-repeat;
+      opacity: 0.18;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-left {}
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,148,58,0.15);
+      border: 1px solid rgba(201,148,58,0.4);
+      color: var(--gold-light);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
+    .hero-promise {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 3px solid var(--gold);
+      padding-left: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--gold-light); color: var(--navy-dark); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.35);
+      font-weight: 500;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-icon {
+      width: 46px;
+      height: 46px;
+      background: rgba(201,148,58,0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      background: var(--gold);
+      padding: 16px 40px;
+    }
+
+    .trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .trust-item span { font-size: 1.1rem; }
+
+    .trust-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* ─── SECTION COMMON ─── */
+    .section {
+      padding: 90px 40px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.75;
+      max-width: 600px;
+    }
+
+    /* ─── 10 PROMISES ─── */
+    .promises {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .promises .section-title { color: var(--white); }
+    .promises .section-lead { color: rgba(255,255,255,0.65); }
+
+    .promises-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .promise-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,148,58,0.2);
+      border-radius: 10px;
+      padding: 20px 22px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .promise-item:hover {
+      background: rgba(201,148,58,0.08);
+      border-color: rgba(201,148,58,0.45);
+    }
+
+    .promise-num {
+      width: 34px;
+      height: 34px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .promise-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.5;
+      padding-top: 6px;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: rgba(255,255,255,0.15);
+    }
+
+    .about-accent {
+      position: absolute;
+      bottom: -18px;
+      right: -18px;
+      width: 120px;
+      height: 120px;
+      background: var(--gold-pale);
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    .about-accent-2 {
+      position: absolute;
+      top: -18px;
+      left: -18px;
+      width: 80px;
+      height: 80px;
+      background: var(--navy);
+      opacity: 0.08;
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    .about-content {}
+
+    .credential-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .credential-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .credential-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .attorney-quote {
+      background: var(--off-white);
+      border-left: 4px solid var(--gold);
+      padding: 18px 22px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ─── PRACTICE AREAS ─── */
+    .practice-bg {
+      background: var(--off-white);
+    }
+
+    .practice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .practice-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .practice-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .practice-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(26,44,78,0.12);
+      border-color: var(--gold);
+    }
+
+    .practice-card:hover::before { transform: scaleX(1); }
+
+    .practice-icon {
+      font-size: 1.9rem;
+      margin-bottom: 14px;
+    }
+
+    .practice-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .practice-card p {
+      font-size: 0.84rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-bg {
+      background: var(--navy-dark);
+    }
+
+    .testimonials-bg .section-title { color: var(--white); }
+    .testimonials-bg .section-label { color: var(--gold-light); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 30px 28px;
+      transition: background 0.2s;
+    }
+
+    .testimonial-card:hover { background: rgba(201,148,58,0.06); border-color: rgba(201,148,58,0.25); }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-stars span {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy-dark);
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .testimonial-case {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1px;
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--gold) 0%, #b8832e 100%);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--navy-dark);
+      padding: 14px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-white:hover { background: var(--navy-dark); color: var(--white); transform: translateY(-2px); }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.6);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ─── CONTACT ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 48px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+      color: var(--navy-dark);
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gold-pale);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-form h3 {
+      font-size: 1.4rem;
+      color: var(--navy-dark);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--navy);
+    }
+
+    .form-group textarea { height: 110px; resize: vertical; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--navy-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--gold); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy-dark);
+      padding: 48px 40px 28px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 28px;
+    }
+
+    .footer-brand .nav-logo-main { font-size: 1.2rem; }
+
+    .footer-tagline {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 60px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li { margin-bottom: 8px; }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.28);
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ─── CONCEPT BADGE ─── */
+    .concept-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 7px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(201,148,58,0.3);
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .concept-badge strong { color: var(--gold-light); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        gap: 40px;
+      }
+
+      .hero h1 { font-size: 2.5rem; }
+      .hero::before { display: none; }
+
+      .promises-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-img-wrap { display: none; }
+      .practice-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .section { padding: 64px 24px; }
+
+      .footer-top { flex-direction: column; gap: 36px; }
+      .footer-links { gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+      .practice-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 1.8rem; }
+      .practice-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .trust-inner { gap: 20px; }
+      .trust-divider { display: none; }
+      .cta-section h2 { font-size: 1.9rem; }
+      .footer-links { flex-direction: column; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <span class="nav-logo-main">North Bay Legal</span>
+      <span class="nav-logo-sub">Personal Injury Attorneys</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">Our Firm</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#promises">Our Promises</a></li>
+      <li><a href="#testimonials">Results</a></li>
+      <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">Our Firm</a></li>
+      <li><a href="#practice" onclick="closeMobile()">Practice Areas</a></li>
+      <li><a href="#promises" onclick="closeMobile()">Our 10 Promises</a></li>
+      <li><a href="#testimonials" onclick="closeMobile()">Results</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta" onclick="closeMobile()">Free Consultation →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">Top-Rated Santa Rosa Injury Attorneys</div>
+        <h1>Fighting For <em>Justice</em> When You Need It Most</h1>
+        <p class="hero-promise">"We Make Promises to Our Clients That Other Law Firms Will Not."</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Free Case Review →</a>
+          <a href="tel:7076363287" class="btn-outline">📞 (707) 636-3287</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stat-card">
+          <div class="stat-icon">⚖️</div>
+          <div>
+            <div class="stat-label">Lead Attorney</div>
+            <div class="stat-value">Michael C. Li</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏛️</div>
+          <div>
+            <div class="stat-label">Background</div>
+            <div class="stat-value">Former DA Prosecutor</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎓</div>
+          <div>
+            <div class="stat-label">Education</div>
+            <div class="stat-value">UC Hastings College of the Law</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📍</div>
+          <div>
+            <div class="stat-label">Located In</div>
+            <div class="stat-value">Santa Rosa, Sonoma County</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item"><span>⭐</span> Top-Rated Local Attorneys</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>🤝</span> No Fee Unless We Win</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>📞</span> Free Consultations</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>⚡</span> Available 24/7</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span>🛡️</span> Aggressive Representation</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">⚖</div>
+          <div class="about-accent"></div>
+          <div class="about-accent-2"></div>
+        </div>
+        <div class="about-content">
+          <p class="section-label">About Our Firm</p>
+          <h2 class="section-title">Experience You Can Count On in Sonoma County</h2>
+          <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 20px;">
+            North Bay Legal is a premier personal injury firm serving Santa Rosa and all of Sonoma County. Led by attorney Michael C. Li, our firm brings a unique insider advantage — a background as a former District Attorney prosecutor means we know exactly how the other side thinks.
+          </p>
+          <ul class="credential-list">
+            <li>Graduate of UC Hastings College of the Law (now UC College of the Law SF)</li>
+            <li>Former District Attorney Prosecutor — we know how insurance companies fight cases</li>
+            <li>Decades of experience in California personal injury law</li>
+            <li>Serving Santa Rosa, Sonoma County, and the entire North Bay region</li>
+            <li>No upfront costs — we only get paid when you do</li>
+          </ul>
+          <div class="attorney-quote">
+            "When you've been injured through no fault of your own, you deserve an attorney who makes real promises — and keeps them. We do things other firms won't."
+            <br><strong style="color: var(--navy-dark); font-style: normal;">— Michael C. Li, Attorney at Law</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE AREAS -->
+  <section class="section practice-bg" id="practice">
+    <div class="section-inner">
+      <div class="practice-header">
+        <div>
+          <p class="section-label">What We Handle</p>
+          <h2 class="section-title">Practice Areas</h2>
+        </div>
+        <a href="#contact" class="btn-primary" style="white-space: nowrap;">Get a Free Review →</a>
+      </div>
+      <div class="practice-grid">
+        <div class="practice-card">
+          <div class="practice-icon">🚗</div>
+          <h3>Car Accidents</h3>
+          <p>Rear-ends, T-bones, DUI collisions — we pursue maximum compensation for your injuries, vehicle damage, and lost wages.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🏍️</div>
+          <h3>Motorcycle Accidents</h3>
+          <p>Motorcyclists face unique dangers on the road. We understand the physics and fight to protect your rights after a crash.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🚶</div>
+          <h3>Pedestrian Accidents</h3>
+          <p>Pedestrians struck by vehicles often suffer catastrophic injuries. We hold negligent drivers fully accountable.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🚲</div>
+          <h3>Bicycle Accidents</h3>
+          <p>With Sonoma County's growing cycling community, bike crashes are serious. Let us fight for your full recovery.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🐕</div>
+          <h3>Dog Bites</h3>
+          <p>California has strict liability laws for dog attacks. We help victims recover damages for medical bills, scarring, and trauma.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🏢</div>
+          <h3>Premises Liability</h3>
+          <p>Slip and fall, unsafe conditions, inadequate security — property owners have a duty to keep you safe.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🧠</div>
+          <h3>Brain & Head Injuries</h3>
+          <p>Traumatic brain injuries change lives. We work with medical experts to document the full scope of your damages.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">🚛</div>
+          <h3>Truck Accidents</h3>
+          <p>Commercial trucking accidents involve complex liability chains. Our experience navigating these cases sets us apart.</p>
+        </div>
+        <div class="practice-card">
+          <div class="practice-icon">💼</div>
+          <h3>Wrongful Termination</h3>
+          <p>Lost your job unlawfully while dealing with an injury? We handle employment claims alongside your personal injury case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 PROMISES -->
+  <section class="section promises" id="promises">
+    <div class="section-inner">
+      <p class="section-label" style="color: var(--gold-light);">What Sets Us Apart</p>
+      <h2 class="section-title">Our 10 Promises to You</h2>
+      <p class="section-lead">We make commitments to every client that other law firms simply won't. This is what you can expect when you choose North Bay Legal.</p>
+      <div class="promises-grid">
+        <div class="promise-item">
+          <div class="promise-num">1</div>
+          <p class="promise-text">We will always return your calls and emails within one business day — guaranteed.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">2</div>
+          <p class="promise-text">You will always speak directly with your attorney — not just a paralegal or assistant.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">3</div>
+          <p class="promise-text">We will give you an honest assessment of your case, even if the answer isn't what you hoped for.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">4</div>
+          <p class="promise-text">We will never settle your case without your full knowledge and written consent.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">5</div>
+          <p class="promise-text">We will explain every legal document in plain English before asking you to sign anything.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">6</div>
+          <p class="promise-text">We will fight for maximum compensation — not the fastest settlement.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">7</div>
+          <p class="promise-text">You pay nothing unless we win. Zero upfront costs, ever.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">8</div>
+          <p class="promise-text">We will keep you informed at every stage — no surprises, no silence.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">9</div>
+          <p class="promise-text">We will refer you to trusted medical providers if you need care and have no insurance.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">10</div>
+          <p class="promise-text">We will treat you and your family with dignity, compassion, and respect throughout your entire case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-bg" id="testimonials">
+    <div class="section-inner">
+      <p class="section-label">Client Stories</p>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"After my accident I was overwhelmed and didn't know where to start. Michael took the time to explain everything step by step. He kept every single promise he made to me on day one. I felt like I was his only client. I can't thank this firm enough for fighting so hard for my family."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">D</div>
+            <div>
+              <div class="testimonial-name">Dawn</div>
+              <div class="testimonial-case">Auto Accident, Sonoma County</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">"I had spoken with two other firms who barely gave me the time of day. North Bay Legal was different from the very first call. They were direct, compassionate, and genuinely interested in my case. Michael's background as a prosecutor gave me complete confidence that we had every advantage."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">B</div>
+            <div>
+              <div class="testimonial-name">Beth</div>
+              <div class="testimonial-case">Premises Liability, Santa Rosa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Injured? Don't Wait.</h2>
+    <p>California has strict deadlines for filing injury claims. Get a free, no-obligation case review today.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-white">Start Your Free Case Review</a>
+      <a href="tel:7076363287" class="btn-outline-white">📞 Call (707) 636-3287</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Free Consultation — No Obligation</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Our Office</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value">420 E Street, Suite 140<br>Santa Rosa, CA 95404</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Main Phone</div>
+              <div class="contact-value">(707) 636-3287</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <div class="contact-label">Direct Line</div>
+              <div class="contact-value">(707) 321-5287</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <div class="contact-label">Hours</div>
+              <div class="contact-value">Mon–Fri: 9am – 6pm<br>Weekend: By Appointment</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🗺️</div>
+            <div>
+              <div class="contact-label">Serving</div>
+              <div class="contact-value">Santa Rosa, Petaluma, Rohnert Park, Healdsburg & all of Sonoma County</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Tell Us About Your Case</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Your first name" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(707) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="you@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Type of Case</label>
+            <select>
+              <option value="">Select a practice area...</option>
+              <option>Car Accident</option>
+              <option>Motorcycle Accident</option>
+              <option>Pedestrian Accident</option>
+              <option>Bicycle Accident</option>
+              <option>Dog Bite</option>
+              <option>Premises Liability / Slip & Fall</option>
+              <option>Brain / Head Injury</option>
+              <option>Truck Accident</option>
+              <option>Wrongful Death</option>
+              <option>Wrongful Termination</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Us What Happened</label>
+            <textarea placeholder="Briefly describe your situation — we'll keep it confidential..."></textarea>
+          </div>
+          <button class="form-submit">Send Message — Free Consultation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-main">North Bay Legal</span>
+            <span class="nav-logo-sub">Personal Injury Attorneys</span>
+          </div>
+          <p class="footer-tagline">"We Make Promises Others Won't."</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Practice Areas</h4>
+            <ul>
+              <li><a href="#practice">Car Accidents</a></li>
+              <li><a href="#practice">Motorcycle Accidents</a></li>
+              <li><a href="#practice">Pedestrian Accidents</a></li>
+              <li><a href="#practice">Dog Bites</a></li>
+              <li><a href="#practice">Premises Liability</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Firm</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#promises">Our 10 Promises</a></li>
+              <li><a href="#testimonials">Client Results</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 North Bay Legal. All rights reserved.</span>
+        <span>420 E Street Suite 140, Santa Rosa CA 95404</span>
+      </div>
+      <p class="footer-disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Viewing this site does not create an attorney-client relationship. Results may vary. Attorney Michael C. Li is licensed to practice in California.</p>
+    </div>
+  </footer>
+
+  <!-- CONCEPT BADGE -->
+  <div class="concept-badge">Concept by <strong>Par4 Technology Solutions</strong></div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobile() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    // Smooth scroll with offset for fixed nav
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
