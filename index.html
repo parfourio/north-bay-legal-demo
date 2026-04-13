@@ -1006,6 +1006,77 @@
 </head>
 <body>
 
+  <!-- OUTREACH BANNER -->
+  <div class="outreach-banner" id="outreachBanner">
+    <div class="outreach-inner">
+      <span class="outreach-wave">👋</span>
+      <p>
+        <strong>Hi Michael</strong> — I built this concept website specifically for <strong>North Bay Legal</strong>.
+        I'd love to hear what you think!
+        <a href="mailto:scott.schultz.solutions@gmail.com">scott.schultz.solutions@gmail.com</a> &nbsp;|&nbsp; <a href="https://parfour.io" target="_blank">parfour.io</a>
+        &nbsp;— <em>Scott Schultz, Par4 Technology Solutions</em>
+      </p>
+      <button class="outreach-close" onclick="document.getElementById('outreachBanner').style.display='none'" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+
+  <style>
+    .outreach-banner {
+      background: linear-gradient(90deg, #b8781e, #d4922a, #b8781e);
+      color: #fff;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .outreach-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .outreach-wave { font-size: 1.2rem; flex-shrink: 0; }
+    .outreach-banner p {
+      flex: 1;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.95);
+      margin: 0;
+    }
+    .outreach-banner p strong { color: #fff; font-weight: 700; }
+    .outreach-banner p em { color: rgba(255,255,255,0.75); font-style: normal; }
+    .outreach-banner a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .outreach-banner a:hover { color: #ffe0a0; }
+    .outreach-close {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .outreach-close:hover { background: rgba(255,255,255,0.35); }
+    @media (max-width: 600px) {
+      .outreach-banner { padding: 10px 16px; }
+      .outreach-banner p { font-size: 0.78rem; }
+    }
+  </style>
+
   <!-- NAV -->
   <nav>
     <div class="nav-logo">
